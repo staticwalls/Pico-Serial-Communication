@@ -63,11 +63,11 @@ int main(void){
                 printf("  led_off - Turn the green onboard LED OFF\r\n");
             } 
             else if (strcmp(buffer, "led_on") == 0) {
-                cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, 1);
+                cyw43_arch_gpio_put(LED_PIN, 1);
                 printf("LED status: ON\r\n");
             } 
             else if (strcmp(buffer, "led_off") == 0) {
-                cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, 0);
+                cyw43_arch_gpio_put(LED_PIN, 0);
                 printf("LED status: OFF\r\n");
             } 
             else if (strlen(buffer) > 0) { // If they typed something but it didn't match any known command
